@@ -17,6 +17,6 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class RevEmployeePK implements Serializable {
 
-    private Integer idEmployee;
+    private Long idEmployee;
     private Long idRevision;
 }

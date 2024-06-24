@@ -1,11 +1,13 @@
 package com.campus.vuelosglobales.airline.domain.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import java.util.List;
+import java.util.Optional;
 
 import com.campus.vuelosglobales.airline.domain.entities.Airline;
 
-@Repository
-public interface AirlineRepository extends JpaRepository<Airline, Long>{
-    
-} 
+public interface AirlineRepository {
+    List<Airline> findAll();
+    Optional<Airline> findById(Integer id);
+    Airline save(Airline airline);
+    void deleteById(Integer id);
+}

@@ -1,4 +1,4 @@
-package com.campus.vuelosglobales.pricerev.domain.entities;
+package com.campus.vuelosglobales.tripcrew.domain.entities;
 
 import com.campus.vuelosglobales.employee.domain.entities.Employee;
 import com.campus.vuelosglobales.flightconnection.domain.entities.FlightConnection;
@@ -7,16 +7,16 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_pricerevs")
+@Table(name = "airport_tripcrew")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PriceRev {
+public class TripCrew {
 
     @EmbeddedId
-    private PriceRevPK id;
+    private TripCrewPK id;
 
     @ManyToOne
     @MapsId("idEmployee")

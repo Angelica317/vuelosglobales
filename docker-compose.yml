@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  MySQL:
+    image: mysql:latest
+    container_name: MySQLVuelosGlobales
+    ports:
+      - "3606:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 161295
+      MYSQL_DATABASE: VuelosGlobales
+      MYSQL_USER: lumigamher
+      MYSQL_PASSWORD: 161295
+    volumes:
+      - MysqlData:/var/lib/mysql
+      - ./src/test/java/com/campus/vuelosglobales/resources/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+
+volumes:
+  MysqlData:
