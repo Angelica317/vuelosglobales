@@ -1,4 +1,4 @@
-package com.campus.vuelosglobales.airline.application.controllers;
+package com.campus.vuelosglobales.airline.infrastructure.adapters.input;
 
 import com.campus.vuelosglobales.airline.application.services.AirlineService;
 import com.campus.vuelosglobales.airline.domain.entities.Airline;
