@@ -3,6 +3,10 @@ package com.campus.vuelosglobales.city.domain.entities;
 
 import com.campus.vuelosglobales.country.domain.entities.Country;
 
+import java.util.List;
+
+import com.campus.vuelosglobales.airport.domain.entities.Airport;
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +27,11 @@ public class City {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "idCountry")
+    @JoinColumn(name = "id_country")
     private Country country;
+
+    @OneToMany(mappedBy = "city")
+    private List<Airport> airports;
+
 }
 

@@ -17,7 +17,7 @@ import lombok.*;
 public class Revision {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "idRev")
     private Long id;
 
     @Column(name = "revisionDate")

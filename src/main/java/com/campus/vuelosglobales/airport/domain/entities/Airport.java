@@ -22,7 +22,7 @@ public class Airport {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id_city")
     private City city;
 }
 

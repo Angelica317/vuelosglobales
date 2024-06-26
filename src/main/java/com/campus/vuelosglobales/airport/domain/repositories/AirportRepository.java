@@ -9,5 +9,5 @@ public interface AirportRepository {
     List<Airport> findAll();
     Optional<Airport> findById(long id);
     Airport save(Airport airport);
-    void deleteById(long Id);
+    void deleteById(long id);
 }
