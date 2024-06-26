@@ -7,7 +7,7 @@ import com.campus.vuelosglobales.airline.domain.entities.Airline;
 
 public interface AirlineRepository {
     List<Airline> findAll();
-    Optional<Airline> findById(Integer id);
+    Optional<Airline> findById(Long id);
     Airline save(Airline airline);
-    void deleteById(Integer id);
+    void deleteById(Long id);
 }

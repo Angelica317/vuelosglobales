@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AirlinePersistenceAdapter extends JpaRepository<Airline, Integer> {
+public interface AirlinePersistenceAdapter extends JpaRepository<Airline, Long> {
 
 }

@@ -23,7 +23,7 @@ public class AirlineRepositoryImpl implements AirlineRepository {
     }
 
     @Override
-    public Optional<Airline> findById(Integer id) {
+    public Optional<Airline> findById(Long id) {
         return airlinePersistenceAdapter.findById(id);
     }
 
@@ -33,7 +33,7 @@ public class AirlineRepositoryImpl implements AirlineRepository {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         airlinePersistenceAdapter.deleteById(id);
     }
 }

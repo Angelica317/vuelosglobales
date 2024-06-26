@@ -22,7 +22,7 @@ public class AirlineController {
     }
 
     @GetMapping("/{id}")
-    public Airline getAirlineById(@PathVariable Integer id) {
+    public Airline getAirlineById(@PathVariable Long id) {
         return airlineService.findById(id);
     }
 
@@ -38,7 +38,7 @@ public class AirlineController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteAirline(@PathVariable Integer id) {
+    public void deleteAirline(@PathVariable Long id) {
         airlineService.deleteById(id);
     }
 }

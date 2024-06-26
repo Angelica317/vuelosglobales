@@ -19,7 +19,7 @@ public class AirlineService {
         return airlineRepository.findAll();
     }
  
-    public Airline findById(Integer id) {
+    public Airline findById(long id) {
         return airlineRepository.findById(id).orElse(null);
     }
 
@@ -27,7 +27,7 @@ public class AirlineService {
         return airlineRepository.save(airline);
     }
 
-    public void deleteById(Integer id) {
+    public void deleteById(long id) {
         airlineRepository.deleteById(id);
     }
 }
