@@ -20,12 +20,12 @@ public class RevEmployee {
 
     @ManyToOne
     @MapsId("idEmployee")
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 
     @ManyToOne
     @MapsId("idRevision")
-    @JoinColumn(name = "id_rev")
+    @JoinColumn(name = "revision_id", referencedColumnName = "id")
     private Revision revision;
 }
 

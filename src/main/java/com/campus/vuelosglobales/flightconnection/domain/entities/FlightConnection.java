@@ -24,14 +24,14 @@ public class FlightConnection {
     private String connectionNumber;
 
     @ManyToOne
-    @JoinColumn(name = "id_trip", nullable = false)
+    @JoinColumn(name = "trip_id", referencedColumnName = "id", nullable = false)
     private Trip trip;
 
     @ManyToOne
-    @JoinColumn(name = "id_plane", nullable = false)
+    @JoinColumn(name = "plane_id", referencedColumnName = "id",nullable = false)
     private Plane plane;
 
     @ManyToOne
-    @JoinColumn(name = "id_airport", nullable = false)
+    @JoinColumn(name = "airport_id", referencedColumnName = "id",nullable = false)
     private Airport airport;
 }

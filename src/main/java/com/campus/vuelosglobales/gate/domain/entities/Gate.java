@@ -21,7 +21,7 @@ public class Gate {
     @Column(name = "gatenumber")
     private String gateNumber;
 
-    @     ManyToOne
-    @JoinColumn(name = "id_airport")
+    @ManyToOne
+    @JoinColumn(name = "airport_id", referencedColumnName = "id")
     private Airport airport;
 }

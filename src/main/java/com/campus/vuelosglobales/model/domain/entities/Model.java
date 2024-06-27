@@ -22,6 +22,6 @@ public class Model {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "idManufacturer")
+    @JoinColumn(name = "manufacturer_id", referencedColumnName = "id")
     private Manufacturer manufacturer;
 }

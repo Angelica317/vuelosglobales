@@ -1,12 +1,13 @@
 package com.campus.vuelosglobales.revisiondetail.domain.entities;
 
+import com.campus.vuelosglobales.employee.domain.entities.Employee;
 import com.campus.vuelosglobales.revision.domain.entities.Revision;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_revision_details")
+@Table(name = "revisiondetails")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,6 +23,10 @@ public class RevisionDetail {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "idRevision")
+    @JoinColumn(name = "revision_id", referencedColumnName = "id")
     private Revision revision;
+    
+    @ManyToOne
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+    private Employee employee;
 }

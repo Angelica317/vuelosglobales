@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_tripcrew")
+@Table(name = "tripcrews")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,11 +20,11 @@ public class TripCrew {
 
     @ManyToOne
     @MapsId("idEmployee")
-    @JoinColumn(name = "idEmployee")
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
     private Employee employee;
 
     @ManyToOne
     @MapsId("idConnection")
-    @JoinColumn(name = "idConnection")
+    @JoinColumn(name = "connection_id", referencedColumnName = "id")
     private FlightConnection flightConnection; 
 }

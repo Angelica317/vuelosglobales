@@ -32,11 +32,11 @@ public class Plane {
     private Date fabricationdate;
 
     @ManyToOne
-    @JoinColumn(name = "id_status")
+    @JoinColumn(name = "status_id", referencedColumnName = "id")
     private Status status;
 
     @ManyToOne
-    @JoinColumn(name = "id_model")
+    @JoinColumn(name = "model_id", referencedColumnName = "id")
     private Model model;
 }
 

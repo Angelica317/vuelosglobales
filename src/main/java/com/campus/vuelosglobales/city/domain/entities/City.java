@@ -27,7 +27,7 @@ public class City {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id_country")
+    @JoinColumn(name = "country_id", referencedColumnName = "id")
     private Country country;
 
     @OneToMany(mappedBy = "city")

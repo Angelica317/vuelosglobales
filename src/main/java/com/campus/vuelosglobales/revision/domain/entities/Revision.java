@@ -25,6 +25,6 @@ public class Revision {
     private Date revisionDate;
 
     @ManyToOne
-    @JoinColumn(name = "id_plane")
+    @JoinColumn(name = "plane_id", referencedColumnName = "id")
     private Plane plane;
 }

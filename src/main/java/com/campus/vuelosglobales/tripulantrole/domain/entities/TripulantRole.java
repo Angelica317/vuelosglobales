@@ -1,10 +1,10 @@
-package com.campus.vuelosglobales.tripulatrole.domain.entities;
+package com.campus.vuelosglobales.tripulantrole.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_tripulantroles")
+@Table(name = "tripulantroles")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -18,4 +18,7 @@ public class TripulantRole {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
+    private String description;
 }

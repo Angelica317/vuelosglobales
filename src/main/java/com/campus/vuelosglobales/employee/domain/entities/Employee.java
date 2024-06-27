@@ -4,7 +4,7 @@ import java.util.Date;
 
 import com.campus.vuelosglobales.airline.domain.entities.Airline;
 import com.campus.vuelosglobales.airport.domain.entities.Airport;
-import com.campus.vuelosglobales.tripulatrole.domain.entities.TripulantRole;
+import com.campus.vuelosglobales.tripulantrole.domain.entities.TripulantRole;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,18 +26,19 @@ public class Employee {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id_rol")
+    @JoinColumn(name = "tripulantrole_id", referencedColumnName = "id")
     private TripulantRole tripulantRole;
 
     @Column(name = "ingresDate")
+    @Temporal(TemporalType.DATE)
     private Date ingresdate;
 
     @ManyToOne
-    @JoinColumn(name = "id_airline")
+    @JoinColumn(name = "airline_id", referencedColumnName = "id")
     private Airline airline;
 
     @ManyToOne
-    @JoinColumn(name = "id_airport")
+    @JoinColumn(name = "airport_id", referencedColumnName = "id")
     private Airport airport;
 }
 

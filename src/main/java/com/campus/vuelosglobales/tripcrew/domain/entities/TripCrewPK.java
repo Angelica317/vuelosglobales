@@ -13,6 +13,6 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class TripCrewPK implements Serializable {
 
-    private String idEmployee; // Tipo String según el esquema
+    private Long idEmployee; 
     private Long idConnection;
 }
