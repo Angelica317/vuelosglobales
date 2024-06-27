@@ -1,4 +1,5 @@
 package com.campus.vuelosglobales.flightconnection.domain.entities;
+
 import com.campus.vuelosglobales.airport.domain.entities.Airport;
 import com.campus.vuelosglobales.plane.domain.entities.Plane;
 import com.campus.vuelosglobales.trip.domain.entities.Trip;
@@ -7,28 +8,30 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
+@Table(name = "flightconnections")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "airport_flight_connections")
 public class FlightConnection {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String connection_number;
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "connection_number", nullable = false)
+    private String connectionNumber;
 
     @ManyToOne
-    @JoinColumn(name = "idTrip")
+    @JoinColumn(name = "id_trip", nullable = false)
     private Trip trip;
 
     @ManyToOne
-    @JoinColumn(name = "idPlane")
+    @JoinColumn(name = "id_plane", nullable = false)
     private Plane plane;
 
     @ManyToOne
-    @JoinColumn(name = "idAirport")
+    @JoinColumn(name = "id_airport", nullable = false)
     private Airport airport;
-
 }

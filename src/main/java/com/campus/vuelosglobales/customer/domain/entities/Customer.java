@@ -1,13 +1,10 @@
 package com.campus.vuelosglobales.customer.domain.entities;
 
-
-import com.campus.vuelosglobales.documenttype.domain.entities.DocumentType;
-
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_customers")
+@Table(name = "customers")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -19,13 +16,15 @@ public class Customer {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
 
-    @Column(name = "age")
-    private Integer age;
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
 
-    @ManyToOne
-    @JoinColumn(name = "idDocument")
-    private DocumentType documentType;
+    @Column(name = "email", nullable = false, unique = true)
+    private String email;
+
+    @Column(name = "phone")
+    private String phone;
 }

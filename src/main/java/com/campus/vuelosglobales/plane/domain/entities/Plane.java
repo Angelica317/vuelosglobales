@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_planes")
+@Table(name = "planes")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,14 +28,15 @@ public class Plane {
     private Integer capacity;
 
     @Column(name = "fabricationDate")
+    @Temporal(TemporalType.DATE)
     private Date fabricationdate;
 
     @ManyToOne
-    @JoinColumn(name = "idStatus")
+    @JoinColumn(name = "id_status")
     private Status status;
 
     @ManyToOne
-    @JoinColumn(name = "idModel")
+    @JoinColumn(name = "id_model")
     private Model model;
 }
 

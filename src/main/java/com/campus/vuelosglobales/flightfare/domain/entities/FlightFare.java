@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_flightfares")
+@Table(name = "flightfares")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,14 +13,15 @@ import lombok.*;
 public class FlightFare {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "description")
+    @Column(name = "description", nullable = false)
     private String description;
 
-    @Column(name = "datails")
+    @Column(name = "details")
     private String details;
 
-    @Column(name = "value")
-    private Long value;
+    @Column(name = "value", nullable = false)
+    private double value;
 }

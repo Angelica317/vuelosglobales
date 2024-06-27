@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_documenttypes")
+@Table(name = "documenttypes")
 @Getter
 @Setter
 @NoArgsConstructor

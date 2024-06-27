@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_revemployee")
+@Table(name = "revemployees")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,7 +25,7 @@ public class RevEmployee {
 
     @ManyToOne
     @MapsId("idRevision")
-    @JoinColumn(name = "idRev")
+    @JoinColumn(name = "id_rev")
     private Revision revision;
 }
 

@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_gates")
+@Table(name = "gates")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,7 +21,7 @@ public class Gate {
     @Column(name = "gatenumber")
     private String gateNumber;
 
-    @ManyToOne
-    @JoinColumn(name = "idairport")
+    @     ManyToOne
+    @JoinColumn(name = "id_airport")
     private Airport airport;
 }

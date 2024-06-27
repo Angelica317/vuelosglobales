@@ -17,13 +17,14 @@ import lombok.*;
 public class Revision {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idRev")
+    @Column(name = "id")
     private Long id;
 
     @Column(name = "revisionDate")
+    @Temporal(TemporalType.DATE)
     private Date revisionDate;
 
     @ManyToOne
-    @JoinColumn(name = "idPlane")
+    @JoinColumn(name = "id_plane")
     private Plane plane;
 }

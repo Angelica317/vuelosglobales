@@ -1,12 +1,12 @@
 package com.campus.vuelosglobales.model.domain.entities;
 
-import com.campus.vuelosglobales.manufacture.domain.entities.Manufacturer;
+import com.campus.vuelosglobales.manufacturer.domain.entities.Manufacturer;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "airport_models")
+@Table(name = "models")
 @Getter
 @Setter
 @NoArgsConstructor

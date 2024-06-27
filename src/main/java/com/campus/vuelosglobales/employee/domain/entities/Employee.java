@@ -26,18 +26,18 @@ public class Employee {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "idRol")
+    @JoinColumn(name = "id_rol")
     private TripulantRole tripulantRole;
 
     @Column(name = "ingresDate")
     private Date ingresdate;
 
     @ManyToOne
-    @JoinColumn(name = "idAirline")
+    @JoinColumn(name = "id_airline")
     private Airline airline;
 
     @ManyToOne
-    @JoinColumn(name = "idAirport")
+    @JoinColumn(name = "id_airport")
     private Airport airport;
 }
 
