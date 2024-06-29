@@ -164,3 +164,133 @@ CREATE TABLE tripcrews (
     FOREIGN KEY (flightconnection_id) REFERENCES flightconnections(id)
 );
 
+-- Datos de prueba para `countries`
+INSERT INTO `countries` (`id`, `name`) VALUES
+(1, 'United States'),
+(2, 'Canada'),
+(3, 'Mexico');
+
+-- Datos de prueba para `cities`
+INSERT INTO `cities` (`id`, `name`, `country_id`) VALUES
+(1, 'New York', 1),
+(2, 'Toronto', 2),
+(3, 'Mexico City', 3);
+
+-- Datos de prueba para `airports`
+INSERT INTO `airports` (`id`, `name`, `id_city`) VALUES
+(1, 'John F. Kennedy International Airport', 1),
+(2, 'Toronto Pearson International Airport', 2),
+(3, 'Mexico City International Airport', 3);
+
+-- Datos de prueba para `airlines`
+INSERT INTO `airlines` (`id`, `name`) VALUES
+(1, 'Delta Air Lines'),
+(2, 'Air Canada'),
+(3, 'Aeroméxico');
+
+-- Datos de prueba para `planes`
+INSERT INTO `planes` (`id`, `capacity`, `fabrication_date`, `plates`, `model_id`, `status_id`) VALUES
+(1, 180, '2010-05-15', 'N12345', 1, 1),
+(2, 200, '2012-08-23', 'C67890', 2, 1),
+(3, 220, '2015-12-10', 'M54321', 3, 2);
+
+-- Datos de prueba para `manufacturers`
+INSERT INTO `manufacturers` (`id`, `name`) VALUES
+(1, 'Boeing'),
+(2, 'Airbus'),
+(3, 'Embraer');
+
+-- Datos de prueba para `models`
+INSERT INTO `models` (`id`, `name`, `manufacturer_id`) VALUES
+(1, '737', 1),
+(2, 'A320', 2),
+(3, 'E190', 3);
+
+-- Datos de prueba para `statuses`
+INSERT INTO `statuses` (`id`, `name`) VALUES
+(1, 'Active'),
+(2, 'Maintenance');
+
+-- Datos de prueba para `employees`
+INSERT INTO `employees` (`id`, `ingres_date`, `name`, `airline_id`, `airport_id`, `tripulantrole_id`) VALUES
+(1, '2018-06-01', 'John Doe', 1, 1, 1),
+(2, '2019-09-15', 'Jane Smith', 2, 2, 2),
+(3, '2020-11-30', 'Carlos Hernández', 3, 3, 3);
+
+-- Datos de prueba para `tripulantroles`
+INSERT INTO `tripulantroles` (`id`, `description`, `name`) VALUES
+(1, 'Pilot', 'Pilot'),
+(2, 'Flight Attendant', 'Attendant'),
+(3, 'Mechanic', 'Mechanic');
+
+-- Datos de prueba para `revisions`
+INSERT INTO `revisions` (`id`, `revision_date`, `plane_id`) VALUES
+(1, '2023-01-10', 1),
+(2, '2023-02-20', 2),
+(3, '2023-03-15', 3);
+
+-- Datos de prueba para `revemployees`
+INSERT INTO `revemployees` (`employee_id`, `revision_id`) VALUES
+(1, 1),
+(2, 2),
+(3, 3);
+
+-- Datos de prueba para `revisiondetails`
+INSERT INTO `revisiondetails` (`id`, `description`, `employee_id`, `revision_id`) VALUES
+(1, 'Engine check', 1, 1),
+(2, 'Landing gear maintenance', 2, 2),
+(3, 'Cabin inspection', 3, 3);
+
+-- Datos de prueba para `flightconnections`
+INSERT INTO `flightconnections` (`id`, `connection_number`, `airport_id`, `plane_id`, `trip_id`) VALUES
+(1, 'DL100', 1, 1, 1),
+(2, 'AC200', 2, 2, 2),
+(3, 'AM300', 3, 3, 3);
+
+-- Datos de prueba para `trips`
+INSERT INTO `trips` (`id`, `price_trip`, `trip_date`, `employee_id`) VALUES
+(1, 500.00, '2024-07-01', 1),
+(2, 450.00, '2024-07-15', 2),
+(3, 400.00, '2024-08-05', 3);
+
+-- Datos de prueba para `tripcrews`
+INSERT INTO `tripcrews` (`connection_id`, `employee_id`) VALUES
+(1, 1),
+(2, 2),
+(3, 3);
+
+-- Datos de prueba para `customers`
+INSERT INTO `customers` (`id`, `email`, `first_name`, `last_name`, `phone`) VALUES
+(1, 'john@example.com', 'John', 'Doe', '123-456-7890'),
+(2, 'jane@example.com', 'Jane', 'Smith', '098-765-4321'),
+(3, 'carlos@example.com', 'Carlos', 'Hernández', '567-890-1234');
+
+-- Datos de prueba para `flightfares`
+INSERT INTO `flightfares` (`id`, `description`, `details`, `value`) VALUES
+(1, 'Economy', 'Standard seat', 200.00),
+(2, 'Business', 'Business class seat', 500.00),
+(3, 'First Class', 'Luxury seat', 1000.00);
+
+-- Datos de prueba para `tripbookings`
+INSERT INTO `tripbookings` (`id`, `date`, `trips_id`) VALUES
+(1, '2024-06-20', 1),
+(2, '2024-06-25', 2),
+(3, '2024-06-28', 3);
+
+-- Datos de prueba para `tripbookingdetails`
+INSERT INTO `tripbookingdetails` (`id`, `trip_booking_detail_date`, `customers_id`, `fares_id`, `trip_booking_id`) VALUES
+(1, '2024-06-20', 1, 1, 1),
+(2, '2024-06-25', 2, 2, 2),
+(3, '2024-06-28', 3, 3, 3);
+
+-- Datos de prueba para `gates`
+INSERT INTO `gates` (`id`, `gatenumber`, `airport_id`) VALUES
+(1, 'A1', 1),
+(2, 'B2', 2),
+(3, 'C3', 3);
+
+-- Datos de prueba para `documenttypes`
+INSERT INTO `documenttypes` (`id`, `name`) VALUES
+(1, 'Passport'),
+(2, 'Driver License'),
+(3, 'ID Card');
