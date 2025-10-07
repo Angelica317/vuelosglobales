@@ -43,3 +43,6 @@ Las contribuciones al proyecto son bienvenidas. Si encuentras algún error o tie
 
 ### Prueba de sincronizacion con Git
 Este cambio es para probar git push
+
+### Prueba git pull
+Este cambio fue realizado directamente desde el gitHub para probar el Git Pull
