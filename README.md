@@ -40,3 +40,6 @@ El proyecto sigue la estructura típica de una aplicación Spring Boot:
 ### Contribuciones
 
 Las contribuciones al proyecto son bienvenidas. Si encuentras algún error o tienes alguna sugerencia de mejora, por favor abre un issue o envía un pull request.
+
+### Prueba de sincronizacion con Git
+Este cambio es para probar git push
